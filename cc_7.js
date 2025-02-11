@@ -79,3 +79,19 @@ function filterHighValueTransactions(transactions) { // filter high-value transa
 const highValueTransactions = filterHighValueTransactions(transactions);// filter high-value transactions
 
 console.log("High Value Transactions:" , highValueTransactions); // Expected output: [1200, 3000, 2200]
+
+
+// Task 7 : Budget Tracker
+
+function createBudgetTracker() { // create a budget tracker
+    let budget = 0; // set initial budget to 0
+    return function(expense) { // create a function to track expenses
+        budget -= expense; // subtract the expense from the budget
+        console.log(`Current Budget: $${budget.toFixed(2)}`)// return the updated budget
+    };       
+}
+
+let budget = createBudgetTracker(); // create a budget tracker
+
+budget(300); // Expected output: "Current Budget: $-300.00"
+budget(200); // Expected output: "Current Budget: $-500.00"
