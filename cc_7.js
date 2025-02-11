@@ -56,3 +56,14 @@ return `Shipping cost: $${shippingCost.toFixed(2)}`; // adding toFixed(2) to mak
 
 console.log(calculateShippingCost(10,"USA", true)); // Expected output: "Shipping cost: $20.00"
 console.log(calculateShippingCost(5, "Canada", false)); // Expected output: "Shipping cost: $13.50"
+
+
+// Task 5 : Business Loan Interest Calculation
+
+function calculateLoanInterest(principal, rate, years) { // calculate the loan interest
+    const interest = principal * rate * years; // calculate the loan interest
+    return `Total interest: $${interest.toFixed(2)}`; // adding toFixed(2) to make interest amount with 2 decimal places
+}
+
+console.log(calculateLoanInterest(1000, 0.05, 3)); // Expected output: "Total interest: $150.00"
+console.log(calculateLoanInterest(5000, 0.07, 5)); // Expected output: "Total interest: $1750.00"
