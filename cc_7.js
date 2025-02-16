@@ -95,3 +95,17 @@ let budget = createBudgetTracker(); // create a budget tracker
 
 budget(300); // Expected output: "Current Budget: $-300.00"
 budget(200); // Expected output: "Current Budget: $-500.00"
+
+
+
+// Task 8: Business Growth Projection
+
+function calculateGrowth(years, revenue) { // calculate the growth projection
+    if (years >=10) {
+        return revenue; // check if the number of years is 0 or greater than 10
+    }
+    return calculateGrowth(years + 1, revenue * 1.05); // recursively calculate the growth projection
+}
+
+console.log (`Projected Revenue: $${calculateGrowth(8, 1000).toFixed(2)}`); // Expected output: "Projected Revenue: $1102.50"
+console.log (`Projected Revenue: $${calculateGrowth(5, 800).toFixed(2)}`); // Expected output: "Projected Revenue: $6381.41"
